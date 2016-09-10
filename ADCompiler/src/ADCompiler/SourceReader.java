@@ -42,9 +42,7 @@ class SourceReader {
 
             String tempString;
 
-            while ((tempString = in.readLine()) != null) {
-                sourceCode.add(tempString);
-            }
+            while ((tempString = in.readLine()) != null) sourceCode.add(tempString);
 
             in.close();
 
