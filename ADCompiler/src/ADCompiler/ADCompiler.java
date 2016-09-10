@@ -15,8 +15,9 @@ class ADCompiler {
     void run() throws IOException {
 
         SourceReader sourceReader = new SourceReader();
+        SourceTokenizer sourceTokenizer = new SourceTokenizer();
 
-        sourceReader.getSourceCode();
+        sourceTokenizer.tokenize(sourceReader.getSourceCode());
 
     }
 }
