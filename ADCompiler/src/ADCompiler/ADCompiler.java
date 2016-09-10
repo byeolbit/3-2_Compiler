@@ -16,8 +16,9 @@ class ADCompiler {
 
         SourceReader sourceReader = new SourceReader();
         SourceTokenizer sourceTokenizer = new SourceTokenizer();
+        Lexeme lexeme = new Lexeme();
 
-        sourceTokenizer.tokenize(sourceReader.getSourceCode());
+        lexeme.analyze(sourceTokenizer.tokenize(sourceReader.getSourceCode()));
 
     }
 }
