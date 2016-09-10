@@ -1,5 +1,6 @@
 package ADCompiler;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -12,20 +13,20 @@ class SourceTokenizer {
 
     }
 
-    public List<Enum> tokenize(List<String> sourceCode) {
+    List<String> tokenize(List<String> sourceCode) {
 
-        List<Enum> tokens = null;
+        List<String> tokens = new ArrayList<>();
+
+        for (String thisLine : sourceCode) {
+
+            StringTokenizer thisToken = new StringTokenizer(thisLine);
+
+            while (thisToken.hasMoreTokens()) tokens.add(thisToken.nextToken());
+
+        }
 
         return tokens;
 
-    }
-
-
-    private StringTokenizer stringTokenizer(String codeLine) {
-
-        StringTokenizer stringTokenizer = new StringTokenizer(codeLine);
-
-        return stringTokenizer;
     }
 
 }
