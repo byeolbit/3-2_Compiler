@@ -16,7 +16,9 @@ class SourceConverter {
 
     SourceConverter() {
         convertedCode.add("#include<stdio.h>");
-        convertedCode.add("int main(){");
+        convertedCode.add("\n");
+        convertedCode.add("int main(void){");
+        convertedCode.add("\n");
     }
 
     List<String> getConvertedCode() {
@@ -45,8 +47,9 @@ class SourceConverter {
 
                 convertedCode.add("\n");
                 convertedCode.add("\tlong " + convertedListId + "[] = {" + convertedList + "};");
+                convertedCode.add("\n");
                 convertedCode.add("\tint _AD_list_size = " + listLength + ";");
-
+                convertedCode.add("\n");
                 break;
 
             case "REDUCE":
@@ -58,16 +61,24 @@ class SourceConverter {
                 convertedResultId = "_AD_result";
 
                 convertedCode.add("\tlong " + convertedResultId + " = 0;");
+                convertedCode.add("\n\n");
+                convertedCode.add("\tint _AD_i = 0;");
+                convertedCode.add("\n\n");
+                convertedCode.add("\tfor (_AD_i = 0 ; _AD_i < _AD_list_size ; _AD_i++){");
                 convertedCode.add("\n");
-                convertedCode.add("\tfor (_AD_i = 0 ; _AD_i < _AD_size ; _AD_i++){");
                 convertedCode.add("\t\t" + convertedResultId + " " + convertedOperator + "= " + convertedListId + "[_AD_i];");
+                convertedCode.add("\n");
                 convertedCode.add("\t}");
+                convertedCode.add("\n\n");
                 break;
 
             case "PRINT":
 
-                convertedCode.add("\tprintf(" + '"' + "%d" + '"' + "," + convertedResultId + ");");
-
+                convertedCode.add("\tprintf(" + '"' + "%ld" + "\\n" + '"' + "," + convertedResultId + ");");
+                convertedCode.add("\n\n");
+                convertedCode.add("\treturn 0;");
+                convertedCode.add("\n\n");
+                convertedCode.add("}");
                 break;
 
             default:
