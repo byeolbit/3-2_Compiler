@@ -8,7 +8,7 @@ public class Main {
 
         ADCompiler ADcompiler = new ADCompiler();
 
-        ADcompiler.run();
+        ADcompiler.run(args[0]);
 
     }
 }

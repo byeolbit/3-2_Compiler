@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by josanggyeong on 2016. 9. 10..
@@ -18,27 +17,13 @@ class SourceReader {
 
     }
 
-    private String inputFilePath() throws IOException {
-
-        String filePath;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Input source file path");
-        filePath = scanner.nextLine();
-
-        return filePath;
-    }
-
-    List<String> getSourceCode() throws IOException {
-
-        String path = inputFilePath();
+    List<String> getSourceCode(String sourcePath) throws IOException {
 
         List<String> sourceCode = new ArrayList<>();
 
         try {
 
-            BufferedReader in = new BufferedReader(new FileReader(path));
+            BufferedReader in = new BufferedReader(new FileReader(sourcePath));
 
             String tempString;
 

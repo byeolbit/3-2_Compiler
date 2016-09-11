@@ -12,13 +12,13 @@ class ADCompiler {
 
     }
 
-    void run() throws IOException {
+    void run(String sourcePath) throws IOException {
 
         SourceReader sourceReader = new SourceReader();
         SourceTokenizer sourceTokenizer = new SourceTokenizer();
         Lexeme lexeme = new Lexeme();
 
-        lexeme.analyze(sourceTokenizer.tokenize(sourceReader.getSourceCode()));
+        lexeme.analyze(sourceTokenizer.tokenize(sourceReader.getSourceCode(sourcePath)));
 
     }
 }
