@@ -16,9 +16,11 @@ class ADCompiler {
 
         SourceReader sourceReader = new SourceReader();
         SourceTokenizer sourceTokenizer = new SourceTokenizer();
-        Lexeme lexeme = new Lexeme();
+        SourceConverter sourceConverter = new SourceConverter();
+        CWriter cWriter = new CWriter();
 
-        lexeme.analyze(sourceTokenizer.tokenize(sourceReader.getSourceCode(sourcePath)));
+        sourceTokenizer.tokenize(sourceReader.getSourceCode(sourcePath), sourceConverter);
+        cWriter.writeCFile(sourceConverter.getConvertedCode());
 
     }
 }
