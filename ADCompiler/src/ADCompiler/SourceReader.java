@@ -2,7 +2,6 @@ package ADCompiler;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +16,7 @@ class SourceReader {
 
     }
 
-    List<String> getSourceCode(String sourcePath) throws IOException {
+    List<String> getSourceCode(String sourcePath) {
 
         List<String> sourceCode = new ArrayList<>();
 
@@ -31,7 +30,7 @@ class SourceReader {
 
             in.close();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
 
             System.err.format("File read error : \n %s", e);
             System.exit(1);

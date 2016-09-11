@@ -1,7 +1,5 @@
 package ADCompiler;
 
-import java.io.IOException;
-
 /**
  * Created by josanggyeong on 2016. 9. 10..
  */
@@ -12,7 +10,7 @@ class ADCompiler {
 
     }
 
-    void run(String sourcePath) throws IOException {
+    void run(String sourcePath) {
 
         SourceReader sourceReader = new SourceReader();
         SourceTokenizer sourceTokenizer = new SourceTokenizer();

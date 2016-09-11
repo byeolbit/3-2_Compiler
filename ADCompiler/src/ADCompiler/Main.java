@@ -1,10 +1,8 @@
 package ADCompiler;
 
-import java.io.IOException;
-
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         ADCompiler ADcompiler = new ADCompiler();
 
