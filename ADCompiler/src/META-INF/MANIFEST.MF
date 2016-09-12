@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: /Users/sanggyeongjo/git/3-2_Compiler/ADCompiler/src/out/pr
+ oducttion/ADCompiler/ADCompiler
+Main-Class: ADCompiler.Main
+

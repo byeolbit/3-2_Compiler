@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ADCompiler:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ADCompiler_jar</output-path>
+    <root id="archive" name="ADCompiler.jar">
+      <element id="module-output" name="ADCompiler" />
+    </root>
+  </artifact>
+</component>
