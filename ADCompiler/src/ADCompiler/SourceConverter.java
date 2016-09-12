@@ -40,7 +40,7 @@ class SourceConverter {
                 convertedListId = "_AD_" + originalCode.get(0);
                 int listLength = 0;
                 if (convertedList != null) {
-                    listLength = convertedList.split(", ").length;
+                    listLength = convertedList.split(",").length;
                 } else {
                     System.err.format("Syntax error\n");
                     System.exit(1);
