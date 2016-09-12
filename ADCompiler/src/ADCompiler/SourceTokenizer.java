@@ -19,8 +19,7 @@ class SourceTokenizer {
 
     private enum Category {
 
-        DEF("def"), REDUCE("reduce"), PRINT("print"), PLUS("+"), MULTIPLY("*"),
-        LISTLEFT("["), LISTRIGHT("]"), LPAR("("), RPAR(")"), ID(null), INT(null);
+        DEF("def"), REDUCE("reduce"), PRINT("print");
 
         final private String lexeme;
 
@@ -70,6 +69,8 @@ class SourceTokenizer {
                         break;
 
                     default:
+                        System.err.format("Keyword error %s is not correct keyword\n", m.group(1));
+                        System.exit(1);
                         break;
 
                 }
