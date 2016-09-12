@@ -35,6 +35,8 @@ class CWriter {
             for (String aConvertedCode : convertedCode) {
                 fw.write(aConvertedCode);
                 fw.flush();
+
+                System.out.print(aConvertedCode);
             }
 
             fw.close();
@@ -42,5 +44,7 @@ class CWriter {
             System.err.format("File write error : \n %s", e);
             System.exit(1);
         }
+
+        System.out.format("File created : %s",filePath);
     }
 }
