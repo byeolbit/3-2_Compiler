@@ -8,6 +8,22 @@
 (print <id3>)
 ```
 
+###실행 방법
+```
+$ java -jar ADCompiler.jar "/path/to/filename.ad"
+
+실행 파일이 있는 디렉토리에 filename.c파일이 생성됨
+```
+ex) test.ad를 대상으로 실행
+```
+$ java -jar ADCompiler.jar ./test.ad
+```
+###test 환경
+사용된 OS : Mac OS X 10.11.6 <br />
+사용된 C컴파일러 : Clang-703.0.31 <br /> <br />
+
+Assignment 설명 
+--------
 ###AD언어 설명
 **`def`** 는 `<id1>`에 해당 숫자리스트를 지정한다.<br />
 여기서 `<id>`는 길이 4 이하인 문자열이고 `<integer>` 값은 5개 이하이다.<br /><br />
@@ -30,11 +46,6 @@ ex2)<br />
 
 출력 : 36
 ```
-<br />
-**사용된 언어 : Java<br />
-사용된 컴파일러 : gcc<br />**
-
-----------
 
 ###주의사항:
 - 제시된 것 이 외의 프로그램 입력의 오류는 없다고 가정한다. (즉 모든 입력이 올바르게 주어진다고 가정한다.)
