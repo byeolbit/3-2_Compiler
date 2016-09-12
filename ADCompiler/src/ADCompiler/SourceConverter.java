@@ -61,30 +61,15 @@ class SourceConverter {
                 String convertedOperator = originalCode.get(1);
                 String convertedInteger = originalCode.get(2);
 
-                int resultInitValue = 0;
-
-                switch (convertedOperator) {
-                    case "+":
-                        resultInitValue = 0;
-                        break;
-                    case "*":
-                        resultInitValue = 1;
-                        break;
-                    default:
-                        System.err.format("Operator error : %s is not exist operator \n", convertedOperator);
-                        System.exit(1);
-                        break;
-                }
-
                 convertedResultId = "_AD_result";
 
-                convertedCode.add("\tlong " + convertedResultId + " = " + resultInitValue + ";");
+                convertedCode.add("\tlong " + convertedResultId + " = " + convertedInteger + ";");
                 convertedCode.add("\n\n");
                 convertedCode.add("\tint _AD_i = 0;");
                 convertedCode.add("\n\n");
                 convertedCode.add("\tfor (_AD_i = 0 ; _AD_i < _AD_list_size ; _AD_i++){");
                 convertedCode.add("\n");
-                convertedCode.add("\t\t" + convertedResultId + " " + convertedOperator + "= (" + convertedListId + "[_AD_i] " + convertedOperator + " " + convertedInteger + ");");
+                convertedCode.add("\t\t" + convertedResultId + " " + convertedOperator + "= " + convertedListId + "[_AD_i];");
                 convertedCode.add("\n");
                 convertedCode.add("\t}");
                 convertedCode.add("\n\n");
@@ -96,7 +81,7 @@ class SourceConverter {
                 convertedCode.add("\n\n");
                 convertedCode.add("\treturn 0;");
                 convertedCode.add("\n\n");
-                convertedCode.add("}");
+                convertedCode.add("}\n");
                 break;
 
             default:
