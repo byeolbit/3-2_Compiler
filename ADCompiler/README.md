@@ -10,9 +10,9 @@
 
 ###실행 방법
 ```
-$ java -jar ADCompiler.jar "/path/to/filename.ad"
+$ java -jar ADCompiler.jar /path/to/filename.ad
 
-실행 파일이 있는 디렉토리에 filename.c파일이 생성됨
+filename.ad파일이 있는 디렉토리에 filename.c파일이 생성됨
 ```
 ex) test.ad를 대상으로 실행
 ```
