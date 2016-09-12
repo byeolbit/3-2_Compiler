@@ -39,7 +39,7 @@ class SourceTokenizer {
 
         Pattern adPattern = Pattern.compile("\\(\\s*(def|reduce|print)\\s*" +
                 "\\s+([a-zA-Z][a-zA-Z0-9]{0,4})" +
-                "\\s*(\\[(\\s*[0-9]+\\s*,){4}\\s*[0-9]+\\s*\\]|([\\+|\\*])\\s+([0-9]+)\\s+([a-zA-Z][a-zA-Z0-9]{0,4}))?\\s*\\)");
+                "\\s*(\\[(\\s*[0-9]+\\s*,){0,4}\\s*[0-9]+\\s*\\]|([\\+|\\*])\\s+([0-9]+)\\s+([a-zA-Z][a-zA-Z0-9]{0,4}))?\\s*\\)");
 
         for (String thisLine : sourceCode) {
 
