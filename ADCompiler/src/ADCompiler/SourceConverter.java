@@ -35,9 +35,13 @@ class SourceConverter {
                 Pattern listPattern = Pattern.compile("\\[(.*?)\\]");
                 Matcher m = listPattern.matcher(originalCode.get(1));
                 String convertedList = null;
+
                 while (m.find()) convertedList = m.group(1);
+
                 convertedListId = "_AD_" + originalCode.get(0);
+
                 int listLength = 0;
+
                 if (convertedList != null) {
                     listLength = convertedList.split(",").length;
                 } else {
