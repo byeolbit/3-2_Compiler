@@ -28,7 +28,6 @@ class SourceConverter {
 
     void convertCode(String type, List<String> originalCode) {
 
-
         switch (type) {
 
             case "DEF":
@@ -83,11 +82,9 @@ class SourceConverter {
                 break;
 
             default:
+                System.err.format("Keyword error : %s is not exist keyword \n", type);
+                System.exit(1);
                 break;
-
         }
-
     }
-
-
 }
