@@ -6,7 +6,7 @@ package ADCompiler;
 
 class ADCompiler {
 
-    ADCompiler(){
+    ADCompiler() {
 
     }
 
@@ -18,7 +18,7 @@ class ADCompiler {
         CWriter cWriter = new CWriter();
 
         sourceTokenizer.tokenize(sourceReader.getSourceCode(sourcePath), sourceConverter);
-        cWriter.writeCFile(sourceConverter.getConvertedCode());
+        cWriter.writeCFile(sourcePath, sourceConverter.getConvertedCode());
 
     }
 }
