@@ -17,7 +17,7 @@ class SourceConverter {
 
     SourceConverter() {
         convertedCode.add("#include<stdio.h>");
-        convertedCode.add("\n");
+        convertedCode.add("\n\n");
         convertedCode.add("int main(void){");
         convertedCode.add("\n");
     }
