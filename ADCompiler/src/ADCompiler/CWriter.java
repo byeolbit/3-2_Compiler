@@ -45,6 +45,6 @@ class CWriter {
             System.exit(1);
         }
 
-        System.out.format("File created : %s",filePath);
+        System.out.format("\nFile created : %s\n", filePath);
     }
 }
