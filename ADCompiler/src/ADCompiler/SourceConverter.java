@@ -73,6 +73,7 @@ class SourceConverter {
                     default:
                         System.err.format("Operator error : %s is not exist operator \n", convertedOperator);
                         System.exit(1);
+                        break;
                 }
 
                 convertedResultId = "_AD_result";
