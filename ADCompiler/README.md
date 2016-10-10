@@ -10,9 +10,9 @@
 
 ###실행 방법
 ```
-$ java -jar ADCompiler.jar "/path/to/filename.ad"
+$ java -jar ADCompiler.jar /path/to/filename.ad
 
-실행 파일이 있는 디렉토리에 filename.c파일이 생성됨
+filename.ad파일이 있는 디렉토리에 filename.c파일이 생성됨
 ```
 ex) test.ad를 대상으로 실행
 ```
@@ -26,7 +26,7 @@ Assignment 설명
 --------
 ###AD언어 설명
 **`def`** 는 `<id1>`에 해당 숫자리스트를 지정한다.<br />
-여기서 `<id>`는 길이 4 이하인 문자열이고 `<integer>` 값은 5개 이하이다.<br /><br />
+여기서 `<id>`는 길이 5 이하인 문자열이고 `<integer>` 값은 5개 이하이다.<br /><br />
 **`reduce`**는 `<id2>`에 있는 숫자리스트를 가지고 `<op>` 계산을 한 결과를 `<id3>`에 저장한다. `<op>`는 `+` 또는 `*` 이다.<br />
 초기값은 `<integer1>` 이다.<br /><br />
 **`print`**는 주어진 식별자가 가지는 값을 출력한다. (리스트면 “,”로 분리한다.)<br /><br />
