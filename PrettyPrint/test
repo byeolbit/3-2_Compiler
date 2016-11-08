@@ -1,0 +1,18 @@
+int max=500;
+int asdfewifdnlfk    ;
+void main(){
+  int i[5]; int j[7]; int k;
+  int rem; int sum;
+
+  i[2] = 4;
+
+  i = 2;
+  while(i <= max) {
+         sum = ( func1( parm1, parm2) + i ) - ( 2 - 1 );
+         k = i / 2;
+         j = i;
+
+         return func2(param);
+  }
+  if(stmt) if(a==2) while(a) if(a==5) while(c) if (a==5) { doRight(dadf); doRight(dadf); doRight(dadf); }
+}
